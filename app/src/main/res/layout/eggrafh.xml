@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp"
+    android:background="@android:color/darker_gray"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/singup"
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/name"
+                android:paddingLeft="15dip"
+                android:paddingRight="85dip"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:ems="10"
+                android:hint="Username">
+           </EditText>
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tele"
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/phone"
+                android:ems="10"
+                android:maxLength="10"
+                android:paddingLeft="15dip"
+                android:paddingRight="5dip"
+                android:drawableLeft="@drawable/ic_phone"
+                android:hint="Phone"
+                android:inputType="numberPassword">
+            </EditText>
+
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Connection"
+        android:id="@+id/bntsign"
+        android:background="@drawable/button_style"
+        android:layout_marginTop="40dp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:layout_width="258dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:id="@+id/textlink2"
+        android:layout_marginRight="41dp"
+        android:textColor="@android:color/holo_purple"
+        android:text="For Facebook, Press Here"/>
+
+    <TextView
+        android:layout_width="258dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="1dp"
+        android:id="@+id/textlink"
+        android:layout_marginRight="41dp"
+        android:textColor="@android:color/black"
+        android:text="If not registered,please register"/>
+
+    <TextView
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="1dp"
+        android:id="@+id/textlink1"
+        android:textStyle="bold"
+        android:linksClickable="true"
+        android:textColor="#1500ff"
+        android:text="HERE"
+        android:layout_marginLeft="140dp"
+        android:layout_gravity="right" />
+
+
+</LinearLayout>

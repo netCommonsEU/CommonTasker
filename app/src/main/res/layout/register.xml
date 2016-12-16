@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp"
+    android:paddingTop="56dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:background="@android:color/darker_gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/singup"
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/name"
+                android:paddingLeft="15dip"
+                android:paddingRight="5dip"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:ems="10"
+                android:hint="Username"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/loc"
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/location"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:drawableLeft="@drawable/location"
+                android:ems="10"
+                android:hint="LOCATION"
+                android:inputType="text"/>
+
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/ag"
+            android:layout_width="match_parent" android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/age"
+                android:ems="10"
+                android:maxLength="2"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:drawableLeft="@drawable/child"
+                android:hint="AGE"
+                android:inputType="number"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tele"
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="318dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/phone"
+                android:paddingLeft="15dip"
+                android:paddingRight="5dip"
+                android:drawableLeft="@drawable/ic_phone"
+                android:ems="10"
+                android:maxLength="10"
+                android:hint="Phone"
+                android:inputType="phone"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Connection"
+        android:background="@drawable/button_style"
+        android:id="@+id/bntsign"
+        android:onClick="SaveUser"
+        android:layout_marginTop="40dp"
+        android:textColor="@android:color/black"/>
+
+</LinearLayout>

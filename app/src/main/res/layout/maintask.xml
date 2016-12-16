@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="@drawable/back">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/my_toolbar"
+      />
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="Errands"
+        android:layout_height="99dp"
+        android:textSize="24sp"
+        android:layout_below="@+id/my_toolbar"
+        android:paddingLeft="65dip"
+        android:paddingRight="65dip"
+        android:layout_marginBottom="166dp"
+        android:drawableLeft="@drawable/ta"
+        android:background="@drawable/button_style"
+        android:id="@+id/button2"
+        android:textColor="#FFFFFF"
+        android:layout_weight="1.05"
+        android:layout_marginTop="29dp"/>
+
+
+    <Button
+        android:layout_width="380dp"
+        android:layout_height="99dp"
+        android:text="Sharing"
+        android:id="@+id/button4"
+        android:paddingLeft="45dip"
+        android:paddingRight="85dip"
+        android:drawableLeft="@drawable/together"
+        android:background="@drawable/button_style"
+        android:layout_marginTop="36dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="2.48"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:layout_marginBottom="46dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+         <Button
+             android:layout_width="380dp"
+             android:layout_height="99dp"
+             android:text="Questions"
+             android:id="@+id/button3"
+             android:paddingLeft="45dip"
+             android:paddingRight="65dip"
+             android:drawableLeft="@drawable/rsz_problem"
+             android:background="@drawable/button_style"
+             android:layout_gravity="center_vertical"
+             android:layout_weight="2.48"
+             android:textColor="#FFFFFF"
+             android:textSize="24sp"
+             android:layout_centerVertical="true"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentStart="true" />
+
+</RelativeLayout>

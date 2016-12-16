@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    android:touchscreenBlocksFocus="false">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/my_toolbar" />
+    <Button
+        android:layout_width="wrap_content"
+        android:text="Ask a question"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:drawableLeft="@drawable/rsz_question"
+        android:paddingLeft="35dip"
+        android:paddingRight="45dip"
+        android:background="@drawable/button_style"
+        android:id="@+id/button4"
+        android:textColor="#FFFFFF"
+        android:layout_weight="1.05"
+        android:layout_marginTop="73dp"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Answer a question"
+        android:id="@+id/button5"
+        android:drawableLeft="@drawable/rsz_talk"
+        android:paddingLeft="15dip"
+        android:paddingRight="65dip"
+        android:background="@drawable/button_style"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="2.48"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

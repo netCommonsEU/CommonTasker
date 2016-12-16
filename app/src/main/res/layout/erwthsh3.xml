@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TopPaidFragment">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_find"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:text="@string/str_btn_find"
+            android:background="@color/grey_font"
+            android:layout_toRightOf="@+id/et_location"
+            android:layout_toEndOf="@+id/et_location"
+            android:layout_below="@+id/button12" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:text="Eίδος Χάρτη"
+            android:textSize="14dp"
+            android:background="@color/grey_font"
+            android:id="@+id/button12"
+            android:onClick="ChangeType"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+        <EditText
+            android:id="@+id/et_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/hnt_et_location" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.google.android.gms.maps.SupportMapFragment">
+        </fragment>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnzoomin"
+            android:textSize="11dp"
+            android:onClick="onZoom"
+            android:background="@drawable/ic_zoom_in"
+            android:layout_marginTop="137dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnzoomout"
+            android:textSize="11dp"
+            android:background="@drawable/ic_zoom_out"
+            android:onClick="onZoom"
+            android:layout_marginTop="163dp"
+            android:layout_below="@+id/btnzoomin"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

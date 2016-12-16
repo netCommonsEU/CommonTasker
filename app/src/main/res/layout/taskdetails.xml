@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/back">
+    <include layout="@layout/toolbar"
+        android:id="@+id/my_toolbar" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Details:"
+        android:textSize="16dp"
+        android:id="@+id/textView3"
+        android:layout_above="@+id/taskdetailsperigrafh"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:text="Title"
+        android:id="@+id/textView11"
+        android:layout_below="@+id/my_toolbar" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleposting"
+        android:background="@drawable/border"
+        android:layout_below="@+id/textView11"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/taskdetailsperigrafh"
+        android:gravity="top"
+        android:lines="5"
+        android:maxLines = "5"
+        android:background="@drawable/border"
+        android:inputType="textMultiLine"
+        android:scrollbars = "vertical"
+        android:scrollHorizontally="true"
+        android:layout_above="@+id/button7"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="165dp"
+        android:layout_height="62dp"
+        android:text="Accept"
+        android:id="@+id/button7"
+        android:textSize="12dp"
+        android:textColor="@android:color/white"
+        android:padding="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/button_style"
+        android:layout_gravity="bottom"
+        android:layout_alignTop="@+id/button8"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/button8" />
+
+    <Button
+        android:layout_width="129dp"
+        android:layout_height="62dp"
+        android:background="@drawable/button_style"
+        android:text="Cancel"
+        android:layout_marginLeft="226dp"
+        android:layout_marginTop="280dp"
+        android:textSize="14dp"
+        android:textColor="@android:color/white"
+        android:id="@+id/button8"
+        android:padding="20dp"
+        android:layout_gravity="bottom"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="HELPFULL VIDEO"
+        android:layout_height="59dp"
+        android:textSize="18sp"
+        android:paddingLeft="35dip"
+        android:paddingRight="35dip"
+        android:background="#80000000"
+        android:drawableLeft="@drawable/ic_youtube"
+        android:id="@+id/button5"
+        android:textColor="@color/text_shadow_white"
+        android:layout_weight="1.05"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+</RelativeLayout>

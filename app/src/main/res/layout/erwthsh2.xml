@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="640dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/back"
+    android:focusableInTouchMode="true">
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Δώστε την Περιόχη σας"
+        android:id="@+id/autoCompleteTextView"
+        android:layout_below="@+id/editText5"
+        android:textSize="20dp"
+        android:inputType="text"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText6"
+        android:gravity="top"
+        android:background="@drawable/border"
+        android:hint="Περιγραφή Έργου..Παράδειγμα: Θέλω  να κουρέψω το γκαζόν μου"
+        android:scrollbars = "vertical"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:layout_below="@+id/autoCompleteTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="ΔΗΜΙΟΥΡΓΗΣΤΕ ΤΟ ΕΡΓΟ"
+        android:id="@+id/button7"
+        android:textSize="16dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@android:color/white"
+        android:padding="10dp"
+        android:background="@drawable/button_style"
+        android:layout_gravity="bottom"
+        android:layout_below="@+id/editText6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:background="@drawable/button_style"
+        android:text="ΑΚΥΡΩΣΗ"
+        android:textSize="16dp"
+        android:textColor="@android:color/white"
+        android:id="@+id/button8"
+        android:padding="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/editText6"
+        android:layout_toRightOf="@+id/button7"
+        android:layout_toEndOf="@+id/button7" />
+
+
+</RelativeLayout>
+
+

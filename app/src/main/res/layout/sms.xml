@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/extreme_back"
+    android:weightSum="1">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="File Messager"
+        android:onClick="goToInbox"
+        android:paddingLeft="1dip"
+        android:paddingRight="5dip"
+        android:textSize="13dp"
+        android:drawableLeft="@drawable/group"
+        android:gravity="center"
+        android:textColor="@color/text_shadow_white"
+        android:background="@drawable/button_style"
+        android:layout_gravity="center_vertical"
+        android:layout_alignBaseline="@+id/button16"
+        android:layout_alignBottom="@+id/button16"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+    <Button
+        android:layout_width="143dp"
+        android:layout_height="wrap_content"
+        android:text="Create a SMS"
+        android:paddingLeft="1dip"
+        android:paddingRight="1dip"
+        android:textColor="@color/text_shadow_white"
+        android:drawableLeft="@drawable/sent_m"
+        android:onClick="goToCompose"
+        android:gravity="center"
+        android:textSize="13dp"
+        android:background="@drawable/button_style"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/button16"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Message Pegeon"
+        android:gravity="center"
+        android:textSize="13dp"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/button17"
+        android:paddingLeft="1dip"
+        android:paddingRight="15dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/button16"
+        android:layout_alignEnd="@+id/button16"
+        android:layout_marginBottom="73dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ChatRoom"
+        android:gravity="center"
+        android:textSize="13dp"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/button18"
+        android:paddingLeft="1dip"
+        android:paddingRight="15dip"
+        android:layout_above="@+id/button17"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="249dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Messages"
+        android:layout_marginLeft="-250dp"
+        android:textSize="28dp"
+        android:textColor="@android:color/darker_gray"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<searchable
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:label="@string/searchable"
+    android:hint="@string/searchable"
+    android:searchSuggestAuthority="com.example.commontasker.SearchableProvider"
+    android:searchSuggestSelection=" ?">
+
+</searchable>

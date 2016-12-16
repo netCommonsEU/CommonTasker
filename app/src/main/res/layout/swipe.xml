@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="@drawable/back">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/linearLayout">
+
+    <ViewFlipper
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:id="@+id/view">
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/frame1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:id="@+id/img"
+                android:src="@drawable/maintask"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_alignBottom="@+id/linearLayout"
+                android:layout_alignRight="@+id/button11"
+                android:layout_alignEnd="@+id/button11"
+                android:layout_marginBottom="130dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_marginBottom="20dip"
+                android:layout_gravity="left|bottom"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="20dp"
+                android:padding="12dip"
+                android:id="@+id/t1"
+                android:stateListAnimator="@anim/fadein"
+                android:background="#AA000000"
+                android:textColor="#ffffffff"
+                android:text="Main menu or crowdsourcing tasks. Please choose the task you are interested in."></TextView>
+
+        </FrameLayout>
+
+
+
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="center"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_alignBottom="@+id/linearLayout"
+                android:layout_alignRight="@+id/button11"
+                android:layout_alignEnd="@+id/button11"
+                android:layout_marginBottom="130dp"
+                android:src="@drawable/loging" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_marginBottom="20dip"
+                android:layout_gravity="center_horizontal|bottom"
+                android:id="@+id/t3"
+                android:padding="12dip"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="20dp"
+                android:background="#AA000000"
+                android:textColor="#ffffffff"
+                android:text="Interface Authentication Data" />
+
+        </FrameLayout>
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/frame2">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_alignBottom="@+id/linearLayout"
+                android:layout_alignRight="@+id/button11"
+                android:layout_alignEnd="@+id/button11"
+                android:layout_marginBottom="130dp"
+                android:src="@drawable/registration" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_marginBottom="20dip"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:id="@+id/t2"
+                android:padding="12dip"
+                android:background="#AA000000"
+                android:textColor="#ffffffff"
+                android:text="Sign up. Please fill out the necessary fields." />
+
+        </FrameLayout>
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="center"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_alignBottom="@+id/linearLayout"
+                android:layout_alignRight="@+id/button11"
+                android:layout_alignEnd="@+id/button11"
+                android:layout_marginBottom="130dp"
+                android:src="@drawable/create_task" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_marginBottom="20dip"
+                android:layout_gravity="center_horizontal|bottom"
+                android:id="@+id/t4"
+                android:padding="12dip"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="20dp"
+                android:background="#AA000000"
+                android:textColor="#ffffffff"
+                android:text="Example: Create a task" />
+
+        </FrameLayout>
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="center"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_alignBottom="@+id/linearLayout"
+                android:layout_alignRight="@+id/button11"
+                android:layout_alignEnd="@+id/button11"
+                android:layout_marginBottom="130dp"
+                android:src="@drawable/list_task" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_marginBottom="20dip"
+                android:layout_gravity="center_horizontal|bottom"
+                android:id="@+id/t5"
+                android:padding="12dip"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="20dp"
+                android:background="#AA000000"
+                android:textColor="#ffffffff"
+                android:text="A possible post application in one of the three basic functions of app" />
+
+        </FrameLayout>
+
+    </ViewFlipper>
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Let’s try it!"
+        android:textColor="@color/text_shadow_white"
+        android:textSize="18dp"
+        android:background="@drawable/button_style"
+        android:id="@+id/button11"
+        android:layout_gravity="right"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:id="@+id/epistrofh"
+     android:textColor="@color/text_shadow_white"
+     android:background="@drawable/button_style"
+     android:text="Exit"
+     android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@drawable/back_m">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MESSAGES"
+        android:textSize="28dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:id="@+id/textView8" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="389dp"
+        android:id="@+id/list"
+        android:transcriptMode="alwaysScroll"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_weight="0.80"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/textView8">
+    </ListView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btncompose"
+        android:text="Create"
+        android:paddingLeft="1dip"
+        android:paddingRight="1dip"
+        android:drawableLeft="@drawable/message"
+        android:background="@drawable/button_style"
+        android:onClick="goToCompose"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/textView8"
+        android:layout_toEndOf="@+id/textView8" />
+
+</RelativeLayout>
