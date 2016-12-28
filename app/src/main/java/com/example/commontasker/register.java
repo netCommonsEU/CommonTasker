@@ -2,13 +2,17 @@ package com.example.commontasker;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.design.widget.TextInputLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -55,7 +59,30 @@ public class register extends AppCompatActivity implements View.OnClickListener 
         ButterKnife.bind(this);
         context = this;
 
-      // databaseUser= FirebaseDatabase.getInstance().getReference().child("Users");
+
+       Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
+       setSupportActionBar(toolbar);
+
+       if (getSupportActionBar() != null){
+           getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+           getSupportActionBar().setDisplayShowHomeEnabled(true);
+           getSupportActionBar().setTitle("Back");
+           toolbar.setTitleTextColor(Color.WHITE);
+
+       }
+
+       toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.left_arrow));
+       toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+
+               finish();
+               startActivity(new Intent(register.this,eggrafh.class));
+
+           }
+       });
+
+       // databaseUser= FirebaseDatabase.getInstance().getReference().child("Users");
       // databaseUser.keepSynced(true);
 
         namel=(TextInputLayout) findViewById(R.id.singup);
@@ -146,6 +173,8 @@ public class register extends AppCompatActivity implements View.OnClickListener 
         }
 
     }
+
+
 
     private void onSignupFailed() {
 

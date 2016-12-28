@@ -123,7 +123,7 @@ public class swipe extends AppCompatActivity  {
                     flipper.setOutAnimation(this, R.anim.out_to_right);
                     // Show the next Screen
 
-                    if (flipper.getDisplayedChild() == 4) {
+                    if (flipper.getDisplayedChild() == 2) {
                         button.setVisibility(View.VISIBLE);
                         button1.setVisibility(View.VISIBLE);
                     } else {
@@ -148,7 +148,7 @@ public class swipe extends AppCompatActivity  {
                     flipper.setOutAnimation(this, R.anim.out_to_left);
                     // Show The Previous Screen
 
-                    if (flipper.getDisplayedChild() == 4) {
+                    if (flipper.getDisplayedChild() == 2) {
                         button.setVisibility(View.VISIBLE);
                         button1.setVisibility(View.VISIBLE);
                     } else {

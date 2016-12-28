@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
@@ -14,6 +15,7 @@ import android.provider.Settings;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
@@ -65,6 +67,7 @@ public class eggrafh extends AppCompatActivity implements View.OnClickListener {
         textlink = (TextView) findViewById(R.id.textlink1);
         textlink2 = (TextView) findViewById(R.id.textlink2);
         btn = (Button) findViewById(R.id.bntsign);
+
 
        // databaseUsers = FirebaseDatabase.getInstance().getReference().child("Users");
         //databaseChild = FirebaseDatabase.getInstance().getReference().child("Users").child("username");
