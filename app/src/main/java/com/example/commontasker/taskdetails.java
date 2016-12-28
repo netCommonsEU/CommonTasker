@@ -56,7 +56,7 @@ public class taskdetails extends MainActivity {
             titlos = extras.getString("title").trim();
 
         }
-        System.out.println(description);
+
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

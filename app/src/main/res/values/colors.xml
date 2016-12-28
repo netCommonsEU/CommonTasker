@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="iron">#CCCCCC</color>
+    <color name="darker_gray">#a9a9a9</color>
     <color name="sinch_purple">#ff63029d</color>
     <color name="primary">#0c7856</color>
     <color name="cardview_light_background">#26a69a</color>

@@ -21,7 +21,7 @@
 
             <TextView android:layout_width="wrap_content"
                 android:layout_height="20dp"
-                android:text="Choose a category press the arrow"
+                android:text="Choose a category press the arrow*"
                 android:id="@+id/in"
                 android:textColor="#fff"
                 android:textSize="13sp"
@@ -48,6 +48,15 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
                 android:layout_toEndOf="@+id/editText6" />
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Choose a time*"
+                android:id="@+id/i"
+                android:textColor="#fff"
+                android:textSize="13sp"
+                android:layout_below="@+id/autoCompleteTextView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -57,21 +66,21 @@
                 android:background="@drawable/border"
                 android:textColor="@color/colorPrimaryDark"
                 android:onClick="timeOnClick"
-                android:layout_below="@+id/autoCompleteTextView"
+                android:layout_below="@+id/i"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Date Start"
+                android:text="Date Start*"
                 android:id="@+id/textView5"
                 android:textColor="#fff"
-                android:layout_below="@+id/editText2"
-                android:layout_alignLeft="@+id/editText5"
-                android:layout_alignStart="@+id/editText5" />
+                android:layout_above="@+id/button10"
+                android:layout_alignLeft="@+id/in3"
+                android:layout_alignStart="@+id/in3" />
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText5"
                 android:gravity="top"
@@ -79,21 +88,22 @@
                 android:background="@drawable/border"
                 android:textSize="16dp"
                 android:hint="Choose Date"
-                android:layout_below="@+id/textView5"
-                android:layout_toLeftOf="@+id/button10"
-                android:layout_toStartOf="@+id/button10" />
+                android:layout_above="@+id/textView7"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView5" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="End Date!Press in text"
+                android:text="End Date!Press in text*"
                 android:id="@+id/textView7"
                 android:textColor="#fff"
-                android:layout_alignTop="@+id/photobtn"
-                android:layout_alignLeft="@+id/editText5"
-                android:layout_alignStart="@+id/editText5" />
+                android:layout_above="@+id/editText7"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText7"
                 android:gravity="top"
@@ -102,21 +112,22 @@
                 android:inputType="date"
                 android:background="@drawable/border"
                 android:hint="Choose Date"
-                android:layout_below="@+id/textView7"
-                android:layout_toLeftOf="@+id/button10"
-                android:layout_toStartOf="@+id/button10" />
+                android:layout_alignTop="@+id/photobtn"
+                android:layout_toStartOf="@+id/spiner1"
+                android:layout_alignRight="@+id/editText5"
+                android:layout_alignEnd="@+id/editText5" />
 
 
           <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Select permissible date:"
+                android:text="Select date*"
                 android:id="@+id/button10"
                 android:textSize="15dp"
                 android:background="#800000"
                 android:textColor="@color/text_shadow_white"
                 android:onClick="Calenderprint"
-              android:layout_alignTop="@+id/editText5"
+              android:layout_above="@+id/editText7"
               android:layout_alignParentRight="true"
               android:layout_alignParentEnd="true" />
             <Button
@@ -126,32 +137,32 @@
                 android:paddingLeft="10dip"
                 android:paddingRight="15dip"
                 android:drawableLeft="@drawable/cam"
-                android:text="Take a picture:"
-                android:layout_below="@+id/button10"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
+                android:text="Take picture:"
+                android:layout_above="@+id/imageButton"
+                android:layout_alignRight="@+id/button10"
+                android:layout_alignEnd="@+id/button10" />
             <TextView android:layout_width="wrap_content"
                 android:layout_height="20dp"
-                android:text="Add a picture:"
+                android:text="Add a picture*"
                 android:id="@+id/in3"
                 android:textColor="#fff"
                 android:textSize="13sp"
                 android:layout_below="@+id/editText7"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_alignRight="@+id/i"
+                android:layout_alignEnd="@+id/i" />
             <ImageButton
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:id="@+id/imageButton"
                 android:adjustViewBounds="true"
                 android:scaleType="centerInside"
-                android:layout_below="@+id/in3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_above="@+id/bt"
+                android:layout_alignRight="@+id/photobtn"
+                android:layout_alignEnd="@+id/photobtn" />
 
             <TextView android:layout_width="wrap_content"
                 android:layout_height="20dp"
-                android:text="Choose a village press the arrow"
+                android:text="Choose a village press the arrow*"
                 android:id="@+id/in2"
                 android:textColor="#fff"
                 android:textSize="13sp"

@@ -19,7 +19,6 @@ public class videos extends taskdetails {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.videos);
         mWebview = (WebView) findViewById(R.id.webView00);
@@ -62,6 +61,7 @@ public class videos extends taskdetails {
 
             @Override
             public void onClick(View v) {
+
 
                 mWebview.getSettings().setJavaScriptEnabled(true);
                 mWebview.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);

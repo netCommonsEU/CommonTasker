@@ -2,17 +2,17 @@ package com.example.commontasker;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.design.widget.TextInputLayout;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.InputFilter;
+import android.text.SpannableString;
+import android.text.Spanned;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -48,8 +48,6 @@ public class register extends AppCompatActivity implements View.OnClickListener 
     private TextInputLayout namel, local,agel,phonel;
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
     private Button btn;
-   // private DatabaseReference databaseUser;
-
 
    @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,16 +64,13 @@ public class register extends AppCompatActivity implements View.OnClickListener 
        if (getSupportActionBar() != null){
            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
            getSupportActionBar().setDisplayShowHomeEnabled(true);
-           getSupportActionBar().setTitle("Back");
-           toolbar.setTitleTextColor(Color.WHITE);
-
+           getSupportActionBar().setTitle(null);
        }
 
        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.left_arrow));
        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-
                finish();
                startActivity(new Intent(register.this,eggrafh.class));
 
@@ -99,8 +94,8 @@ public class register extends AppCompatActivity implements View.OnClickListener 
         shake = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.shake);
         vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         btn.setOnClickListener(this);
-
-     }
+       name.setFilters(new InputFilter[] { filter });
+   }
 
 
     @Override
@@ -187,6 +182,37 @@ public class register extends AppCompatActivity implements View.OnClickListener 
         setResult(RESULT_OK, null);
         finish();
     }
+
+    InputFilter filter = new InputFilter() {
+        @Override
+        public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
+            boolean keepOriginal = true;
+            StringBuilder sb = new StringBuilder(end - start);
+            for (int i = start; i < end; i++) {
+                char c = source.charAt(i);
+                if (isCharAllowed(c)) // put your condition here
+                    sb.append(c);
+                else
+                    keepOriginal = false;
+            }
+            if (keepOriginal)
+                return null;
+            else {
+                if (source instanceof Spanned) {
+                    SpannableString sp = new SpannableString(sb);
+                    TextUtils.copySpansFrom((Spanned) source, start, sb.length(), null, sp, 0);
+                    return sp;
+                } else {
+                    return sb;
+                }
+            }
+        }
+
+        private boolean isCharAllowed(char c) {
+            return Character.isLetterOrDigit(c);
+        }
+    };
+
 
     public boolean validate() {
         boolean valid = true;
@@ -276,7 +302,6 @@ public class register extends AppCompatActivity implements View.OnClickListener 
         if(name.getText().toString().trim().isEmpty()){
 
             namel.setErrorEnabled(true);
-            namel.setError(getString(R.string.err_msg_name));
             return false;
         }
         namel.setErrorEnabled(false);
@@ -288,7 +313,6 @@ public class register extends AppCompatActivity implements View.OnClickListener 
         if (lo.getText().toString().trim().isEmpty()) {
 
             local.setErrorEnabled(true);
-            local.setError(getString(R.string.err_msg_password));
             requestFocus(local);
             return false;
         }
@@ -300,7 +324,6 @@ public class register extends AppCompatActivity implements View.OnClickListener 
 
         if (phone.getText().toString().trim().isEmpty()) {
             phonel.setErrorEnabled(true);
-            phonel.setError(getString(R.string.err_msg_password));
             requestFocus(phonel);
             return false;
         }
@@ -329,6 +352,7 @@ public class register extends AppCompatActivity implements View.OnClickListener 
         }
         return super.onKeyDown(keycode, event);
     }
+
 
 
 }

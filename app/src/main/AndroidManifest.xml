@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.commontasker" >
 
@@ -95,39 +96,72 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/CustomActionBarTheme" />
-        <activity android:name=".maintask" />
-        <activity android:name=".ergo" />
-        <activity android:name=".questions" />
-        <activity android:name=".common" />
-        <activity android:name=".questionanswers" />
-        <activity android:name=".moirasou" />
-        <activity android:name=".answer" />
-        <activity android:name=".camera" />
-        <activity android:name=".register" />
-        <activity android:name=".AnswerDetails" />
-        <activity android:name=".moirasou1" />
-        <activity android:name=".Questionitem" />
-        <activity android:name=".moirasou3" />
-        <activity android:name=".moirasou2" />
-        <activity android:name=".sos" />
-        <activity android:name=".eggrafh" />
-        <activity android:name=".diathesimothta" />
-        <activity android:name=".taskdetails" />
-        <activity android:name=".swipe" />
-        <activity android:name=".SendSmsActivity" />
-        <activity android:name=".ReceiveSMSActivity" />
-        <activity android:name=".sms" />
-        <activity android:name=".createtask" />
-        <activity android:name=".FbActivity" />
-        <activity android:name=".TopFreeFragment" />
-        <activity android:name=".TopPaidFragment" />
-        <activity android:name=".HomeFrag" />
-        <activity android:name=".AndroidFacebookActivity" />
-        <activity android:name=".Chat_Room" />
-        <activity android:name=".AntikeimenoDetails" />
-        <activity android:name=".realchattime" />
-        <activity android:name=".ErgoDetails" />
-        <activity android:name=".customOnItemSelectedListener1" />
+        <activity android:name=".maintask"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ergo"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".questions"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".common"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".questionanswers"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".moirasou"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".answer"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".camera"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".register"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AnswerDetails"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".moirasou1"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Questionitem"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".moirasou3"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".moirasou2"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".sos"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".eggrafh"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".diathesimothta"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".taskdetails"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".swipe"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SendSmsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ReceiveSMSActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".sms"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".createtask"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FbActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".TopFreeFragment"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".TopPaidFragment"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".HomeFrag"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AndroidFacebookActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Chat_Room"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AntikeimenoDetails"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".realchattime"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ErgoDetails"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".customOnItemSelectedListener1"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".SplashActivity"
             android:label="@string/app_name"
@@ -140,15 +174,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+
         </activity>
         <activity
             android:name="com.facebook.FacebookActivity"
+            android:screenOrientation="portrait"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
@@ -165,6 +202,7 @@
 
         <receiver
             android:name=".SmsBroadcastReceiver"
+            android:screenOrientation="portrait"
             android:exported="true" >
             <intent-filter android:priority="999" >
                 <action android:name="android.provider.Telephony.SMS_RECEIVER" />

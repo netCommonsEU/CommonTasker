@@ -55,22 +55,8 @@ public class swipe extends AppCompatActivity  {
         button.setVisibility((View.INVISIBLE));
         button1.setVisibility((View.INVISIBLE));
 
-
         addListenerOnButtonFirst();
 
-        ObjectAnimator colorAnim = ObjectAnimator.ofInt(button, "textColor", Color.RED, Color.TRANSPARENT);
-        colorAnim.setDuration(1000);
-        colorAnim.setEvaluator(new ArgbEvaluator());
-        colorAnim.setRepeatCount(ValueAnimator.INFINITE);
-        colorAnim.setRepeatMode(ValueAnimator.REVERSE);
-        colorAnim.start();
-
-        ObjectAnimator colorAnim1 = ObjectAnimator.ofInt(button1, "textColor", Color.BLUE, Color.TRANSPARENT);
-        colorAnim1.setDuration(1000);
-        colorAnim1.setEvaluator(new ArgbEvaluator());
-        colorAnim1.setRepeatCount(ValueAnimator.INFINITE);
-        colorAnim1.setRepeatMode(ValueAnimator.REVERSE);
-        colorAnim1.start();
     }
 
 
@@ -123,14 +109,9 @@ public class swipe extends AppCompatActivity  {
                     flipper.setOutAnimation(this, R.anim.out_to_right);
                     // Show the next Screen
 
-                    if (flipper.getDisplayedChild() == 2) {
-                        button.setVisibility(View.VISIBLE);
-                        button1.setVisibility(View.VISIBLE);
-                    } else {
 
                         button.setVisibility((View.INVISIBLE));
                         button1.setVisibility((View.INVISIBLE));
-                    }
 
                     flipper.showNext();
 

@@ -185,7 +185,7 @@ public class diathesimothta extends AppCompatActivity {
                     intent_name.putExtra("start_date", sporoi1.get(childPosition).getDatearxh());
                     intent_name.putExtra("last_date", sporoi1.get(childPosition).getDatetel());
                     intent_name.putExtra("location", sporoi1.get(childPosition).getLocation());
-                    intent_name.setClass(getApplicationContext(), AnswerDetails.class);
+
 //                    intent_name.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 //                    getApplicationContext().startActivity(intent_name);
                     startActivity(intent_name);

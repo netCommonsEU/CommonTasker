@@ -102,7 +102,7 @@ public class task extends AppCompatActivity {
         }
 
         button1=(Button)  findViewById(R.id.button6);
-      // databaselike= FirebaseDatabase.getInstance().getReference().child("Likes");
+        // databaselike= FirebaseDatabase.getInstance().getReference().child("Likes");
         database= FirebaseDatabase.getInstance().getReference().child("Tasks");
 
         /*expandableListView = (ExpandableListView) findViewById(R.id.expandableListView2);
@@ -198,7 +198,7 @@ public class task extends AppCompatActivity {
                     intent_name.putExtra("time", vohtheia1.get(childPosition).getTime());
                     intent_name.putExtra("date", vohtheia1.get(childPosition).getDate());
                     intent_name.putExtra("location", vohtheia1.get(childPosition).getLocation());
-                    intent_name.setClass(getApplicationContext(), AnswerDetails.class);
+
 //                    intent_name.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 //                    getApplicationContext().startActivity(intent_name);
                     startActivity(intent_name);
@@ -240,7 +240,6 @@ public class task extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
                 for (DataSnapshot Question : snapshot.getChildren()) {
-                    System.out.println(Question.child("title").getValue());
                     if(Question.child("title").getValue().equals("Outdoor tasks")){
                         exwterikes.add(Question.child("description").getValue().toString().trim());
                         TaskItem add = new TaskItem(Question.child("title").getValue().toString().trim(),Question.child("location").getValue().toString().trim(),Question.child("time").getValue().toString().trim(),Question.child("image").getValue().toString().trim(),Question.child("date").getValue().toString().trim(),Question.child("description").getValue().toString().trim());

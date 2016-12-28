@@ -72,6 +72,27 @@ public class eggrafh extends AppCompatActivity implements View.OnClickListener {
        // databaseUsers = FirebaseDatabase.getInstance().getReference().child("Users");
         //databaseChild = FirebaseDatabase.getInstance().getReference().child("Users").child("username");
         //databaseUsers.keepSynced(true);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(toolbar);
+
+
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+            getSupportActionBar().setTitle(null);
+
+        }
+
+        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.left_arrow));
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                finish();
+                startActivity(new Intent(eggrafh.this,maintask.class));
+
+            }
+        });
 
         shake = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.shake);
         vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
